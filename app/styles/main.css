@@ -1,0 +1,56 @@
+/*part of standard stylesheet*/
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/*basic body styles*/
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+/*fullpage.js styling*/
+#fullpage { position: fixed; overflow: automatic; }
+/*makes sure sidebar is clickable*/
+#sidenav-overlay {z-index: 90}
+/*keeps navbar with page*/
+#nav { position: fixed;
+       top: 0;
+       left: 0;
+       display: block;
+       z-index: 99;
+      }
+/*stylesheets for sections*/
+#sa, #sc, #se { background: #ffebee; }
+#sb, #sd { background: #ffcdd2; }
+
+/*position the funnel chart*/
+#funnel { padding-left: 100px; padding-top: 100px; }
+/*from the webapp boilerplate*/
+.hero-unit {
+  margin: 50px auto 0 auto;
+  width: 400px;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  background-color: purple;
+  border-radius: 6px;
+  padding: 60px;
+  color: white;
+}
+
+.hero-unit h1 {
+  font-size: 60px;
+  line-height: 1;
+  color: pink;
+  letter-spacing: -1px;
+}
+
+/* line chart styles */
+.line {
+  fill: none;
+  stroke: purple;
+  stroke-width: 2px;
+}
