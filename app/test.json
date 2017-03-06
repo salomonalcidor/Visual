@@ -1,0 +1,96 @@
+{
+	"experience":[
+		{
+			"type":"Work",
+			"institution":"Public Defender's Office, 9th Circuit",
+			"title":"County I.T. Tech",
+			"from":"2017-01-23",
+			"to":"2017-05-04",
+			"description":"Provide I.T. Support for the 9th Circuit, which included Orlando and Kissimmee\nProvide Photographical support to the Investigations Team\nManages the various websites of the attornies",
+			"default_item":true
+		},
+		{
+			"type":"Work",
+			"institution":"Innovative Logix, LLC",
+			"title":"County Data Migrator",
+			"from":"2017-01-04",
+			"to":"2016-11-02",
+			"description":"Data migration for the public schools of Orange County /n Skills used: HTML, CSS, JS",
+			"default_item":false
+		},
+		{
+			"type":"Work",
+			"institution":"Alpha Beta Commerce",
+			"title":"Web/Mobile Developer",
+			"from":"2016-07-15",
+			"to":"2015-12-01",
+			"description":"Created a PSD to HTML Website\nManaged company site through use of Wordpress",
+			"default_item":false
+		},
+		{
+			"type":"Work",
+			"institution":"Team IBR LLC.",
+			"title":"Junior Web Developer",
+			"from":"2016-05-01",
+			"to":"2015-05-01",
+			"description":"Junior web developer\nGraphics recreation\nIncorporated E-commerce method into existing sites",
+			"default_item":false
+		},
+		{
+			"type":"Work",
+			"institution":"U.S. Army Reserve",
+			"title":"88H - Cargo Specialist",
+			"from":"2009-10-01",
+			"to":"2015-12-05",
+			"description":"Cargo Specialist for the 489th TC in Jacksonville FL",
+			"default_item":false
+		},
+		{
+			"type":"Work",
+			"institution":"Staples Inc.",
+			"title":"Material Handler / Drivery Support II",
+			"from":"2013-08-01",
+			"to":"2015-04-10",
+			"description":"Warehousing and Inventory Control",
+			"default_item":false
+		}
+	],
+	"study":[
+		{
+			"type":"University",
+			"institution":"University of Central Florida",
+			"title":"Bachelor of Arts in Digital Media (B.A.)",
+			"from":"2014-01-07",
+			"to":"2017-05-04",
+			"description":"",
+			"default_item":false
+		},
+		{
+			"type":"Community College",
+			"institution":"Valencia College",
+			"title":"Associates in Arts (A.A)",
+			"from":"2013-05-13",
+			"to":"2013-12-15",
+			"description":"",
+			"default_item":false
+		},
+		{
+			"type":"Community College",
+			"institution":"Florida State College at Jacksonville",
+			"title":"Computer Networking Systems (A.S.)",
+			"from":"2011-01-10",
+			"to":"2013-05-06",
+			"description":"",
+			"default_item":false
+		},
+		{
+			"type":"High School",
+			"institution":"Paxon School for Advanced Studies",
+			"title":"High School Diploma",
+			"from":"2006-08-11",
+			"to":"2010-06-10",
+			"description":"",
+			"default_item":false
+		}
+	]
+}

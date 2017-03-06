@@ -11,14 +11,15 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
     <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css" />
     <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Heebo|Roboto" rel="stylesheet">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -26,83 +27,169 @@
     <!-- endbuild -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
-  <body>
-    <!--[if IE]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <nav id="nav">
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down purple darken-2">
-        <li><a href="index.html">Resume</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-      </ul>
-    </div>
-  </nav>
-  <div id="fullpage">
-    <div id="sa" class="section"><div class="hero-unit animated pulse infinite">
-      <h1>My Name</h1>
-      <p>An aspiring:</p>
-      <ul>
-        <li>Web Designer</li>
-        <li>Developer</li>
-        <li>????</li>
-      </ul>
-    </div></div>
-    <div id="sb" class="section"><div id="funnel"></div></div>
-    <div id="sc" class="section"><div id="graph"></div></div>
-    <div id="sd" class="section"><div class="row">
-<div class="col s12 m4">
-<div class="icon-block">
-<h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-<h5 class="center tlt">Fast</h5>
+<body>
+<!--BEGINNING OF MAIN CONTENT-->
+	<main>
+		<div id="fullpage">
+<!--SECTION ONE-->
+			<div class="section myface">
+				<div class="splash">
+					<div class="row">
+						<div class="col m12">
+							<h1 class="animated zoomIn site_title center-align">Salomon Alcidor</h1>
+						</div>
+						<div class="row">
+							<div class="col m4"></div>
+						 	<div class="col m4"><!--
+							 <div class="card blue lighten-1 center-align">
+								<div class="card-content white-text">
+								  <span class="card-title">About Me</span>
+								  <p>County I.T. Tech <br>
+								  Backend Developer <br />
+								  Freelance Photographer</p>
+								</div>
+								<div class="card-action">
+								  <a href="#">This is a link</a>
+								  <a href="#">This is a link</a>
+								</div>
+							  </div>-->
+							</div>
+							<div class="col m4"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<p class="light">Such fast. Very optimized. Wow.</p>
-</div>
-</div>
+<!--SECTION TWO-->
+			<div class="section">
+				<h3 class="center-align">Determination</h3>
+				<div class="whitecard center animated pulse">
+					<div class="row">
+						<div class="col s1"></div>
+						<div class="col s10">
+							<p>It is easy to say I want to be a backend web developer. What you do not see is the effort that has been placed into making this dream happen. From the late night coding sessions to the early morning time logs, notating what tasks have been accomplished. Although graduation is near and class work will no longer be mandated, the mission, will not yet be over until I retire as a backend developer.</p>
+						</div>
+						<div class="col s1"></div>
+					</div>
+					<div class="row">
+				<div class="divider"></div>
+						<div class="col s12">
+							<pre>"Success is not the key to happiness.
+Happiness is the key to success.
+If you love what you are doing,
+you will be successful."
+							    <br>- Albert Schweitzer</pre>
+						</div>
+					</div>
+				</div>
+			</div>
 
-<div class="col s12 m4">
-<div class="icon-block">
-<h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-<h5 class="center tlt">User Experience Focused</h5>
+<!--SECTION THREE-->
+<!--EXPERIENCE SECTION WITH D3.JS-->
+			<div class="section row center hide-on-med-and-down">
+				<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+				<script src="full.js"></script>
+				<div class="col s9">
+					<div id="experience"></div></div>
+				<script>
+					$(document).ready(function(){
+						var height = $(window).height();
+						var width = $(window).width();
+						var svgHeight = 700;
+						var container = $('#experience');
 
-<p class="light">Whatever that means.</p>
-</div>
-</div>
+						if (width < 900) width = 900;
 
-<div class="col s12 m4">
-<div class="icon-block">
-<h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-<h5 class="center tlt">Easy to work with</h5>
+						container
+							.css('left', function(e){
+							  return (-1 * (width - container.parent().width()) / 2) + 'px';
+							});
 
-<p class="light">As long as there's coffee.</p>
-</div>
-</div>
-</div></div>
-    <div id="se" class="section">
-      <h1 class="center tlthead">
-        <ul class="texts">
-          <li>Contact me!</li>
-          <li>Please?</li>
-          <li>(But don't call)</li>
-        </ul>
-      </h1>
+						var resume = new d3Resume({
+						  width: width,
+						  height: svgHeight,
+						  wrapperSelector: "#experience",
+						  dataUrl: 'test.json',
+						  getItemFillCollor: getItemFillCollor
+						});
+					});
+				</script>
+			</div>
 
-    </div>
-  </div>
+<!--SECTION FOUR-->
+			<div class="section" id="works">
+				<div class="center">
+				<h2>My Work</h2>
+				<p class="caption">Hover pver the text to see something special</p>
+				<ul class="row container">
+					<li class="col s4 p_items"><a id="01">Auntie &amp; Uncle</a></li>
+					<li class="col s4 p_items"><a id="02">Welsonne's Whip</a></li>
+					<li class="col s4 p_items"><a id="10">Jeff &amp; Thamar</a></li>
 
+					<li class="col s6 push-s1"><a id="06">AK¥</a></li>
+					<li class="col s6 pull-s1"><a id="13">A &amp; V</a></li>
 
+					<li class="col s4"><a id="04">Ali's Escape</a></li>
+					<li class="col s4"><a id="03">Johnny's Reflection</a></li>
+					<li class="col s4"><a id="08">Ley's B-day</a></li>
+
+					<li class="col s6 push-s1"><a id="11">Gabby</a></li>
+					<li class="col s6 pull-s1"><a id="09">It's Over</a></li>
+
+					<li class="col s4"><a id="05">Graduation Smile</a></li>
+					<li class="col s4"><a id="12">Gelos in Thought</a></li>
+					<li class="col s4"><a id="07">Welsonne's Cap</a></li>
+				</ul>
+				</div>
+			</div>
+
+<!--SECTION FIVE-->
+			<div class="section">
+			<div class="center">
+				<h2>Contact Me</h2>
+				<form class="row container" action="email.php" method="post">
+					<div class="col s12">
+						<div class="input-field col m6 l6">
+							<i class="material-icons prefix">account_circle</i>
+							<input id="name" name="name" type="text" class="validate" placeholder="Full Name" required>
+							<label for="name">Name*</label>
+						</div>
+						<div class="input-field col m6 l6">
+							<i class="material-icons prefix">phone</i>
+							<input id="phone" name="phone" type="text" class="validate" required>
+							<label for="phone">Phone Number *</label>
+						</div>
+						<div class="input-field col m6 l6">
+							<i class="material-icons prefix">subject</i>
+							<input id="subject" name="subject" type="text" class="validate">
+							<label for="subject">Subject</label>
+						</div>
+						<div class="input-field col m6 l6">
+							<i class="material-icons prefix">email</i>
+							<input id="email" name="email" type="text" class="validate" required>
+							<label for="email" data-error="wrong" data-success="right">Email Address *</label>
+						</div>
+						<div class="input-field col s12">
+							<i class="material-icons prefix">message</i>
+							<textarea id="textarea1" name="textarea1" class="materialize-textarea" required></textarea>
+							<label for="textarea1">Message *</label>
+						</div>
+						<button class="btn waves-effect waves-light center" type="submit" name="action">Submit<i class="material-icons right col s12">send</i></button>
+					</div>
+				</form>
+			</div>
+			</div>
+		</div>
+	</main>
+</body>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/modernizr/modernizr.js"></script>
-    <script src="/bower_components/materialize/bin/materialize.js"></script>
     <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/materialize/bin/materialize.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.js"></script>
-    <script src="/bower_components/d3-funnel/dist/d3-funnel.js"></script>
-    <script src="/bower_components/letteringjs/jquery.lettering.js"></script>
-    <script src="/bower_components/textillate/jquery.textillate.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

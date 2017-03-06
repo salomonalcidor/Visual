@@ -1,127 +1,210 @@
-console.log('\'Allo \'Allo!');
-//jQuery: runs when the document is ready
+// JavaScript Document
 $(document).ready(function() {
-  //settings for fullpage.js: anchors are for the sections on the menu, responsiveWidth is breakpoint
-    var sections = ['sa','sb','sc','sd','se'];
-    $('.tlthead').textillate({
-      minDisplayTime: 1000,
-      in: { effect: 'flipInX'},
-      out :{ delay: 3, effect: 'lightSpeedOut'},
-      loop: true
-    });
-    $('.tlt').textillate({ in: { effect: 'rollIn' } });
+	"use strict";
     $('#fullpage').fullpage({
-        menu: '#nav',
-       	anchors: ['a', 'b', 'c', 'd', 'e'],
-       	normalScrollElements: '#nav',
-        paddingTop: 0,
-        paddingBottom: 0,
-        responsiveWidth: 640,
-        css3: true,
-        onLeave: function(index, nextIndex, direction){
-          if (nextIndex == 3) {
-            lineChart();
-          }
-          if (nextIndex == 2) {
-            funnelChart();
-          }
-          if (nextIndex == 4) {
-            $('.tlt').textillate('in');
-          }
-        }
-      });
-
+        anchors:['p1', 'p2', 'p3', 'p4', 'p5'],
+		sectionsColor: ['#e8e8f4', '#71D0A2', '#4BA3C3', '#947DD4', '#4760C2'],
+		//Scrolling
+		scrollHorizontally: true,
+    });
 });
 
-function lineChart() {
-  d3.select('#graph').selectAll('*').remove();
-    // set the dimensions and margins of the graph
-  var margin = {top: 200, right: 20, bottom: 100, left: 50},
-      width = $(window).width() - margin.left - margin.right,
-      height = $(window).height() - margin.top - margin.bottom;
+// JS CODE TO CHANGE BUTTONS ON HOVER
+// IMAGE 01
+	var c01 = document.getElementById("01");
+	var c02 = document.getElementById("02");
+	var c03 = document.getElementById("03");
+	var c04 = document.getElementById("04");
+	var c05 = document.getElementById("05");
+	var c06 = document.getElementById("06");
+	var c07 = document.getElementById("07");
+	var c08 = document.getElementById("08");
+	var c09 = document.getElementById("09");
+	var c10 = document.getElementById("10");
+	var c11 = document.getElementById("11");
+	var c12 = document.getElementById("12");
+	var c13 = document.getElementById("13");
 
-  // parse the date / time
-  var parseTime = d3.timeParse('%d-%b-%y');
+	c01.addEventListener("mouseover", f1a, false);
+	c01.addEventListener("mouseout", f1b, false);
+	c02.addEventListener("mouseover", f2a, false);
+	c02.addEventListener("mouseout", f2b, false);
+	c03.addEventListener("mouseover", f3a, false);
+	c03.addEventListener("mouseout", f3b, false);
+	c04.addEventListener("mouseover", f4a, false);
+	c04.addEventListener("mouseout", f4b, false);
+	c05.addEventListener("mouseover", f5a, false);
+	c05.addEventListener("mouseout", f5b, false);
+	c06.addEventListener("mouseover", f6a, false);
+	c06.addEventListener("mouseout", f6b, false);
+	c07.addEventListener("mouseover", f7a, false);
+	c07.addEventListener("mouseout", f7b, false);
+	c08.addEventListener("mouseover", f8a, false);
+	c08.addEventListener("mouseout", f8b, false);
+	c09.addEventListener("mouseover", f9a, false);
+	c09.addEventListener("mouseout", f9b, false);
+	c10.addEventListener("mouseover", f10a, false);
+	c10.addEventListener("mouseout", f10b, false);
+	c11.addEventListener("mouseover", f11a, false);
+	c11.addEventListener("mouseout", f11b, false);
+	c12.addEventListener("mouseover", f12a, false);
+	c12.addEventListener("mouseout", f12b, false);
+	c13.addEventListener("mouseover", f13a, false);
+	c13.addEventListener("mouseout", f13b, false);
 
-  // set the ranges
-  var x = d3.scaleTime().range([0, width]);
-  var y = d3.scaleLinear().range([height, 0]);
+//Image O1
+	function f1a(){
+		"use strict";
+		var c01 = document.getElementById("works");
+		c01.setAttribute("style", "background:url(images/work/01.jpg);background-size:cover;");
+	}
 
-  // define the line
-  var valueline = d3.line()
-      .x(function(d) { return x(d.date); })
-      .y(function(d) { return y(d.close); });
+	function f1b(){
+		"use strict";
+		var c01 = document.getElementById("works");
+		c01.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O2
+	function f2a(){
+		"use strict";
+		var c02 = document.getElementById("works");
+		c02.setAttribute("style", "background:url(images/work/02.jpg);background-size:cover;");
+	}
 
-  // append the svg obgect to the body of the page
-  // appends a 'group' element to 'svg'
-  // moves the 'group' element to the top left margin
-  var svg = d3.select('#graph').append('svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-      .attr('transform',
-            'translate(' + margin.left + ',' + margin.top + ')');
+	function f2b(){
+		"use strict";
+		var c02 = document.getElementById("works");
+		c02.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O3
+	function f3a(){
+		"use strict";
+		var c03 = document.getElementById("works");
+		c03.setAttribute("style", "background:url(images/work/03.jpg);background-size:cover;");
+	}
 
-  // Get the data
-  d3.csv('data.csv', function(error, data) {
-    if (error) throw error;
+	function f3b(){
+		"use strict";
+		var c03 = document.getElementById("works");
+		c03.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O4
+	function f4a(){
+		"use strict";
+		var c04 = document.getElementById("works");
+		c04.setAttribute("style", "background:url(images/work/04.jpg);background-size:cover;");
+	}
 
-    // format the data
-    data.forEach(function(d) {
-        d.date = parseTime(d.date);
-        d.close = +d.close;
-    });
+	function f4b(){
+		"use strict";
+		var c04 = document.getElementById("works");
+		c04.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O5
+	function f5a(){
+		"use strict";
+		var c05 = document.getElementById("works");
+		c05.setAttribute("style", "background:url(images/work/05.jpg);background-size:cover;");
+	}
 
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) { return d.date; }));
-    y.domain([0, d3.max(data, function(d) { return d.close; })]);
+	function f5b(){
+		"use strict";
+		var c05 = document.getElementById("works");
+		c05.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O6
+	function f6a(){
+		"use strict";
+		var c06 = document.getElementById("works");
+		c06.setAttribute("style", "background:url(images/work/06.jpg);background-size:cover;");
+	}
 
-    // Add the valueline path.
-    svg.append('path')
-        .data([data])
-        .attr('class', 'line')
-        .attr('d', valueline)
-        .transition()
-          .duration(10000)
-          .attr('opacity', 100);
+	function f6b(){
+		"use strict";
+		var c06 = document.getElementById("works");
+		c06.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O7
+	function f7a(){
+		"use strict";
+		var c07 = document.getElementById("works");
+		c07.setAttribute("style", "background:url(images/work/07.jpg);background-size:cover;");
+	}
 
-    // Add the X Axis
-    svg.append('g')
-        .attr('transform', 'translate(0,' + height + ')')
-        .call(d3.axisBottom(x));
+	function f7b(){
+		"use strict";
+		var c07 = document.getElementById("works");
+		c07.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O8
+	function f8a(){
+		"use strict";
+		var c08 = document.getElementById("works");
+		c08.setAttribute("style", "background:url(images/work/08.jpg);background-size:cover;");
+	}
 
-    // Add the Y Axis
-    svg.append('g')
-        .call(d3.axisLeft(y));
+	function f8b(){
+		"use strict";
+		var c08 = document.getElementById("works");
+		c08.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image O9
+	function f9a(){
+		"use strict";
+		var c09 = document.getElementById("works");
+		c09.setAttribute("style", "background:url(images/work/09.jpg);background-size:cover;");
+	}
 
-  });
+	function f9b(){
+		"use strict";
+		var c09 = document.getElementById("works");
+		c09.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image 1O
+	function f10a(){
+		"use strict";
+		var c10 = document.getElementById("works");
+		c10.setAttribute("style", "background:url(images/work/10.png);background-size:cover;");
+	}
 
-}
+	function f10b(){
+		"use strict";
+		var c10 = document.getElementById("works");
+		c10.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image 11
+	function f11a(){
+		"use strict";
+		var c11 = document.getElementById("works");
+		c11.setAttribute("style", "background:url(images/work/11.jpg);background-size:cover;");
+	}
 
-function funnelChart() {
-  var data = [
-['D3', 500, '#008080', '#080800'],
-['Bootstrap', 250, '#702963', '#FFFFFF'],
-['Materialize', 200, '#FFFF00', '#6f34fd'],
-['jQuery', 100, '#00cccc', '#080800'],
-// Background ---^ ^--- Label
-];
-  var options = {
-   block: {
-     dynamicHeight: true,
-     highlight: true
-   },
-   chart: {
-     width: $(window).width() -200,
-     height: $(window).height() -200,
-     animate: 1000
-   },
-   label: {
-    fontFamily: 'Arial',
-    fontSize: '20px'
-  }
-  };
-  d3.select('#funnel').selectAll('*').remove();
-  var chart = new D3Funnel('#funnel');
-  chart.draw(data, options);
-}
+	function f11b(){
+		"use strict";
+		var c11 = document.getElementById("works");
+		c11.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image 12
+	function f12a(){
+		"use strict";
+		var c12 = document.getElementById("works");
+		c12.setAttribute("style", "background:url(images/work/12.jpg);background-size:cover;");
+	}
+
+	function f12b(){
+		"use strict";
+		var c12 = document.getElementById("works");
+		c12.setAttribute("style", "background-color:#947dd4;");
+	}
+//Image 13
+	function f13a(){
+		"use strict";
+		var c13 = document.getElementById("works");
+		c13.setAttribute("style", "background:url(images/work/13.jpg);background-size:cover;");
+	}
+
+	function f13b(){
+		"use strict";
+		var c13 = document.getElementById("works");
+		c13.setAttribute("style", "background-color:#947dd4;");
+	}
